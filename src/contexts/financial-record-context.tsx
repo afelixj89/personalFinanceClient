@@ -29,11 +29,12 @@ export const FinancialRecordsProvider = ({
 }) => {
   const [records, setRecords] = useState<FinancialRecord[]>([]);
   const { user } = useUser();
+  const apiUrl = "https://mypersonalfinance101-7793bdb1651f.herokuapp.com/";
 
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `http://localhost:3001/financial-record/getAllByUserId/${user?.id}`
+      `${apiUrl}financial-record/getAllByUserId/${user.id}`
     );
 
     if (response.ok) {
@@ -48,7 +49,7 @@ export const FinancialRecordsProvider = ({
   }, [user]);
 
   const addRecord = async (record: FinancialRecord) => {
-    const response = await fetch("http://localhost:3001/financial-record", {
+    const response = await fetch(`${apiUrl}financial-record`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,16 +72,13 @@ export const FinancialRecordsProvider = ({
   };
 
   const updateRecord = async (id: string, newRecord: FinancialRecord) => {
-    const response = await fetch(
-      `http://localhost:3001/financial-record/${id}`,
-      {
-        method: "PUT",
-        body: JSON.stringify(newRecord),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(`${apiUrl}financial-record/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(newRecord),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     try {
       if (response.ok) {
@@ -99,12 +97,9 @@ export const FinancialRecordsProvider = ({
   };
 
   const deleteRecord = async (id: string) => {
-    const response = await fetch(
-      `http://localhost:3001/financial-record/${id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const response = await fetch(`${apiUrl}financial-record/${id}`, {
+      method: "DELETE",
+    });
 
     try {
       if (response.ok) {
