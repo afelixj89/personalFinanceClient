@@ -1,0 +1,23 @@
+node_modules
+
+
+dist/
+
+# Editor files
+.idea/
+.vscode/
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+
+# Dependency lock files
+yarn.lock
+.pnp.*
+.pnpm-lock.yaml
+
+# Cache directories
+/cache/
