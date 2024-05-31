@@ -15,21 +15,21 @@ function App() {
     <Router>
       <div className="app-container">
         <div className="navbar">
-          <Link to='/'>Dashboard</Link>
+          <Link to='/db'>Dashboard</Link>
           <SignedIn>
             <UserButton showName />
           </SignedIn>
         </div>
         <Routes>
           <Route
-            path="/"
+            path="/db"
             element={
               <FinancialRecordsProvider>
                 <Dashboard />
               </FinancialRecordsProvider>
             }
           />
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/" element={<Auth />} />
         </Routes>
       </div>
     </Router>
