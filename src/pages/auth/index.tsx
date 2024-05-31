@@ -1,26 +1,17 @@
 import React from "react";
-import {
-  // SignInButton,
-  // SignUpButton,
-  SignedIn,
-  // SignedOut,
-} from "@clerk/clerk-react";
-import { Navigate } from "react-router-dom";
-import "./Auth.css"; // Optional: Add any specific styles for Auth component
+import { Link } from "react-router-dom";
+import { SignedIn } from "@clerk/clerk-react";
+import "./Auth.css";
 
 export const Auth: React.FC = () => {
   return (
     <div className="sign-in-container">
-      {/* <SignedOut>
-        <SignUpButton mode="modal">
-          <button className="auth-button">Sign Up</button>
-        </SignUpButton>
-        <SignInButton mode="modal">
-          <button className="auth-button">Sign In</button>
-        </SignInButton>
-      </SignedOut> */}
       <SignedIn>
-        <Navigate to="/db" />
+        <div className="dashboard-link-container">
+          <Link to="/db" className="dashboard-link">
+            Dashboard
+          </Link>
+        </div>
       </SignedIn>
     </div>
   );

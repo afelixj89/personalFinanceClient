@@ -7,18 +7,18 @@ import {
   SignUpButton,
   UserButton,
 } from "@clerk/clerk-react";
-import "./NavBar.css"; // Separate CSS for NavBar
+import "./NavBar.css";
 
 const NavBar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <span>MyPersonalFinance</span>
+        <Link to="/" className="brand-link">MyPersonalFinance</Link>
       </div>
       <div className="navbar-right">
         <SignedIn>
           <Link to="/db">Dashboard</Link>
-          <UserButton  />
+          <UserButton />
         </SignedIn>
         <SignedOut>
           <SignUpButton mode="modal">

@@ -1,52 +1,59 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box;
-}
-.navbar-left {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.navbar-right a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-right .clerk-user-button {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-right .clerk-user-button .clerk-user-button-name {
-  margin-left: 10px;
-  color: white;
-}
-
-.nav-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #555;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.nav-button:hover {
-  background-color: #777;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .navbar-left {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color: white; 
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .navbar-right a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-right .clerk-user-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right .clerk-user-button .clerk-user-button-name {
+    margin-left: 10px;
+    color: white;
+  }
+  
+  .nav-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #777;
+  }
+  
