@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="brand-link">MyPersonalFinance</Link>
+        <Link to="/" className="brand-link">MyFinanceLog</Link>
       </div>
       <div className="navbar-right">
         <SignedIn>
