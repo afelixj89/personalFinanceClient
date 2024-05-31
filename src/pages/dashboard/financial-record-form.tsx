@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useFinancialRecords } from "../../contexts/financial-record-context";
-import './style.css'
+import './style.css';
 
 export const FinancialRecordForm = () => {
   const [description, setDescription] = useState<string>("");
@@ -9,7 +9,6 @@ export const FinancialRecordForm = () => {
   const [category, setCategory] = useState<string>("");
   const [paymentMethod, setPaymentMethod] = useState<string>("");
   const { addRecord } = useFinancialRecords();
-
   const { user } = useUser();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -24,12 +23,13 @@ export const FinancialRecordForm = () => {
       paymentMethod: paymentMethod,
     };
 
-    addRecord(newRecord)
+    addRecord(newRecord);
     setDescription("");
     setAmount("");
     setCategory("");
     setPaymentMethod("");
   };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -44,7 +44,7 @@ export const FinancialRecordForm = () => {
           />
         </div>
         <div className="form-field">
-          <label>Amout:</label>
+          <label>Amount:</label>
           <input
             type="number"
             required
@@ -65,7 +65,7 @@ export const FinancialRecordForm = () => {
             <option value="Food">Food</option>
             <option value="Rent">Rent</option>
             <option value="Salary">Salary</option>
-            <option value="Utilitlies">Utilities</option>
+            <option value="Utilities">Utilities</option>
             <option value="Entertainment">Entertainment</option>
             <option value="Other">Other</option>
           </select>
@@ -84,9 +84,11 @@ export const FinancialRecordForm = () => {
             <option value="Bank Transfer">Bank Transfer</option>
           </select>
         </div>
-        <button type="submit" className="button">
-          Add Record
-        </button>
+        <div className="button-container">
+          <button type="submit" className="button">
+            Add Record
+          </button>
+        </div>
       </form>
     </div>
   );
