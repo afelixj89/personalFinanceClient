@@ -22,8 +22,8 @@ export const Dashboard = () => {
         <FinancialRecordForm />
         <div>Total Monthly: {totalMonthly}</div>
         <FinancialRecordList />
-
-
+{/* 
+need to fixed the dashboard css */}
 
 
         
